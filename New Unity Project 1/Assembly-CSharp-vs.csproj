@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Collectable.cs" />
+     <Compile Include="Assets\Detective.cs" />
      <Compile Include="Assets\Thief.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
