@@ -1,4 +1,0 @@
-EYEBROW-GAME-STRONK
-===================
-
-THIS IS THE BEST GAME EVER
