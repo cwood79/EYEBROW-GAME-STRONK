@@ -3,11 +3,14 @@ using System.Collections;
 
 public class Thief : MonoBehaviour {
 	//private GameObject thief;
-	private float jumpForce = 20;
-	private float addPoints = 20;
+	public float jumpForce = 30f;
+	public float jumpTime = 0.5f;
+	public float moveSpeed = 20f;
+	
+	public float addPoints = 20;
 
 	public static float points = 0;
-	public float moveSpeed = 20;
+
 
 	// Use this for initialization
 	void Start () {
@@ -16,9 +19,8 @@ public class Thief : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//float inputX = Input.GetAxis("Horizontal");
 
-		if(Input.GetKey (KeyCode.RightArrow)) {
+		if(Input.GetKey(KeyCode.RightArrow)) {
 			transform.Translate(new Vector3(moveSpeed, 0, 0) * Time.deltaTime);
 					}
 		if(Input.GetKey (KeyCode.LeftArrow)) {
@@ -27,18 +29,20 @@ public class Thief : MonoBehaviour {
 
 		// Jump
 		if(Input.GetKey (KeyCode.UpArrow)) {
-			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+			rigidbody2D.AddForce(Vector3.up * jumpForce);
 			}
 	}
 		             
 
 	void OnCollisionEnter2D(Collision2D collision) {
-			if (collision.gameObject.name == "collectable") {
+			if (collision.gameObject.name == "collectable"){// && Input.GetKey (KeyCode.RightShift)) {
 				points += addPoints;
+				Destroy (collision.gameObject);
+				print("Current points " + points);
 				}
-			/*if (collision.gameObject.tag == "bottom" && Input.GetKey (KeyCode.UpArrow)) {
-				rigidbody2D.AddForce(new Vector2(0f, jumpForce));
-		} */
+			//if (collision.gameObject.name == "bottom" && Input.GetKey (KeyCode.UpArrow)) {
+			//	rigidbody2D.AddForce(Vector3.up * jumpForce);
+			//	} 
 			// unlock door
 		//		if (Collision.GameObject.namespace == "door" &&  Input.getKey("RightShift"))// use action key) {
 

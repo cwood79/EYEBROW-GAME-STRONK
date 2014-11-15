@@ -4,7 +4,7 @@ using System.Collections;
 public class Collectable : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) { 
-		if(other.gameObject.name == "Detective" ||other.gameObject.name == "Thief")
+		if(other.gameObject.name == "detective" ||other.gameObject.name == "thief")
 		{
 			Destroy(gameObject.collider2D);
 			gameObject.renderer.enabled = false;
