@@ -55,15 +55,10 @@ public class Thief : MonoBehaviour {
 			Destroy (collision.gameObject);
 			print("Current points " + points);
 		}
-		//if (collision.gameObject.name == "bottom" && Input.GetKey (KeyCode.UpArrow)) {
-		//	rigidbody2D.AddForce(Vector3.up * jumpForce);
-		//	} 
-		// unlock door
-		//		if (Collision.GameObject.namespace == "door" &&  Input.getKey("RightShift"))// use action key) {
-		
-		//	}
-		// climb ladder
-		//if (collision.gameObject.namespace == "ladder" && Input.getKey("Up") {
-		//	}
+
+		if (collision.gameObject.name == "Door" && Input.GetKey (KeyCode.RightShift)) {
+			collision.gameObject.SendMessage("openDoor");
+
+		}
 	}
 }
