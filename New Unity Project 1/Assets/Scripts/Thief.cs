@@ -34,7 +34,7 @@ public class Thief : MonoBehaviour {
 	}
 	
 	
-	void OnCollisionEnter2D(Collision2D collision) {
+	void OnCollisionStay2D(Collision2D collision) {
 		if (collision.gameObject.name == "collectable" && Input.GetKey (KeyCode.RightShift)) {
 			points += addPoints;
 			Destroy (collision.gameObject);
