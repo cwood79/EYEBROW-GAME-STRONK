@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Detective.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Thief.cs">
     <Files>
-      <File FileName="Assets\Scripts\Detective.cs" Line="5" Column="32" />
+      <File FileName="Assets\Scripts\Thief.cs" Line="6" Column="30" />
+      <File FileName="Assets\Scripts\Detective.cs" Line="51" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
