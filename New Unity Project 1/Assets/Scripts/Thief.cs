@@ -8,7 +8,7 @@ public class Thief : MonoBehaviour {
 	
 	public float addPoints = 20;
 	
-	public static float points = 0;
+	public float points = 0;
 
 	public bool grounded = true;
 	

@@ -6,7 +6,7 @@ public class Detective : MonoBehaviour {
 	public float moveSpeed = 10f; // horizontal speed
 	public const float ADD_POINTS = 20;
 	
-	public static float points = 0;
+	public float points = 0;
 	public const int MAX_V = 2;
 
 	public bool grounded = true;
